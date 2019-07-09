@@ -13,15 +13,6 @@ TEMPLATE = app
 
 LIBS      += -lopenal
 
-packagesExist(hidapi-libusb) {
-  unix:LIBS += -lhidapi-libusb
-} else {
-  packagesExist(hidapi) {
-    unix:LIBS += -lhidapi
-  } else {
-    unix:LIBS += -lhidapi-libusb
-  }
-}
 
 DISTFILES +=
 
